@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css_assets/style.css}">
+    <title>Login - Pastimes</title>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <a th:href="@{/}"><img th:src="@{/_images/logo.png}" alt="Logo" style="height: 30px;"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/catalog}">Catalog</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main style="max-width: 400px; margin: 50px auto; padding: 20px;">
+    <h2>Login to Your Account</h2>
+
+    <div th:if="${errorMsg}" style="color: red; margin-bottom: 15px;">
+        <p th:text="${errorMsg}"></p>
+    </div>
+
+    <div th:if="${msg}" style="color: green; margin-bottom: 15px;">
+        <p th:text="${msg}"></p>
+    </div>
+
+    <form method="post" th:action="@{/login}">
+        <div style="margin-bottom: 15px;">
+            <label>Username:</label>
+            <input type="text" name="username" required style="width: 100%; padding: 8px;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label>Password:</label>
+            <input type="password" name="password" required style="width: 100%; padding: 8px;">
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label>
+                <input type="checkbox" name="remember-me"> Remember me
+            </label>
+        </div>
+
+        <button type="submit" class="btn" style="width: 100%;">Login</button>
+    </form>
+
+    <p style="text-align: center; margin-top: 20px;">
+        Don't have an account? <a th:href="@{/register}">Register here</a>
+    </p>
+</main>
+
+</body>
+</html>

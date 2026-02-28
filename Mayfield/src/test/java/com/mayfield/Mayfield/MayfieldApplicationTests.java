@@ -1,0 +1,13 @@
+package com.mayfield.Mayfield;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class MayfieldApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
