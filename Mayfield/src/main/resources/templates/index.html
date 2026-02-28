@@ -29,12 +29,11 @@
         </nav>
     </div>
 </header>
-
 <main>
     <section class="hero">
         <div class="left">
             <!-- Safe null handling -->
-            <p th:text="'Logged in as: ' + (${user_name} ?: 'Guest')">Logged in as: User</p>
+
             <h3 class="head_text">Welcome to Pastimes</h3>
             <p class="body_text">Revive Your Style, Relive The Past</p>
             <a th:href="@{/catalog}"><button id="banner_btn">SHOP NOW</button></a>

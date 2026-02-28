@@ -16,7 +16,7 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         // Static resources (CSS, JS, images)
                         .requestMatchers("/css/**", "/css_assets/**", "/js/**", "/javascript_assets/**",
-                                "/images/**", "/_images/**", "/webjars/**").permitAll()
+                                "/images/**", "/_images/**", "/webjars/**","/dashboard/**").permitAll()
 
                         // Public pages - anyone can view
                         .requestMatchers("/", "/index", "/catalog", "/about_us", "/contact_us",
