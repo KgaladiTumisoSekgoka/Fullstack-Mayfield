@@ -45,7 +45,7 @@ CREATE TABLE users(
     enabled BOOLEAN DEFAULT TRUE,
     PRIMARY KEY(id)
 );
-
+```md
 ---
 ## 2. Configuration
 Create src/main/resources/application.properties:
