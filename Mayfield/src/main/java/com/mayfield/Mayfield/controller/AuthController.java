@@ -9,22 +9,27 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class AuthController {
 
     @GetMapping("/login")
-    public String login(@RequestParam(value = "error", required = false) String error,
-                        @RequestParam(value = "logout", required = false) String logout,
-                        Model model) {
+    public String login() {
+        return "redirect:/mayfield";  // Redirect old /login to new page
+    }
+
+    @GetMapping("/mayfield")
+    public String mayfield(@RequestParam(value = "error", required = false) String error,
+                           @RequestParam(value = "logout", required = false) String logout,
+                           Model model) {
 
         if (error != null) {
-            model.addAttribute("errorMsg", "Invalid username or password");
+            model.addAttribute("errorMsg", "Invalid email or password");
         }
         if (logout != null) {
-            model.addAttribute("msg", "You have been logged out successfully");
+            model.addAttribute("msg", "Logged out successfully");
         }
 
-        return "login";
+        return "mayfield";  // Renders templates/mayfield.html
     }
 
     @GetMapping("/register")
     public String register() {
-        return "register";
+        return "redirect:/mayfield";  // Both on same page
     }
 }

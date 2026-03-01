@@ -25,6 +25,8 @@
                 <li><a th:href="@{/catalog}">Catalog</a></li>
                 <li><a th:href="@{/about_us}">About Us</a></li>
                 <li><a th:href="@{/contact_us}">Contact Us</a></li>
+                <!--Implement authorization for authorized users-->
+                <li><a th:href="@{/dashboard}">Dashboard</a></li>
             </ul>
         </nav>
     </div>
@@ -34,7 +36,7 @@
         <div class="left">
             <!-- Safe null handling -->
 
-            <h3 class="head_text">Welcome to Pastimes</h3>
+            <h3 class="head_text">Welcome to Mayfield</h3>
             <p class="body_text">Revive Your Style, Relive The Past</p>
             <a th:href="@{/catalog}"><button id="banner_btn">SHOP NOW</button></a>
         </div>
@@ -46,10 +48,10 @@
         </div>
     </section>
 
-    <h2 class="head_right" style="text-align: center;">Welcome to Pastimes</h2>
+    <h2 class="head_right" style="text-align: center;">Welcome to Mayfield</h2>
     <p class="services_p" style="text-align: center;">
-        Your one-stop shop for high-quality, pre-loved clothing.<br>
-        At Pastimes, we believe in giving clothes a second chance...
+        Your one-stop shop for high-quality, loved clothing.<br>
+        At Mayfield, we believe in selling quality clothes...
     </p>
 
     <!-- Featured Items with null check -->
@@ -125,7 +127,7 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2024 Pastimes | All Rights Reserved.</p>
+        <p>&copy; 2024 Mayfield | All Rights Reserved.</p>
     </div>
 </footer>
 <script th:src="@{/javascript_assets/main.js}"></script>
