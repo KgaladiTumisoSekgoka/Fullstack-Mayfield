@@ -19,6 +19,15 @@ public class DashboardController {
     public String FiveErrorPage() {
         return "dashboard/500"; // dashboard/404.html
     }
+    @GetMapping("/dashboard/layout-static")
+    public String layoutStatic() {
+        return "dashboard/layout-static";
+    }
+
+    @GetMapping("/dashboard/layout-sidenav-light")
+    public String layoutSidenavLight() {
+        return "dashboard/layout-sidenav-light";
+    }
     @GetMapping("/dashboard/charts")
     public String analyticsPage() {
         return "dashboard/charts"; // dashboard/analytics.html
