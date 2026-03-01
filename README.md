@@ -100,6 +100,9 @@ http://localhost:8080/dashboard/500	Error 500 page	Public
 ---
 ## Project Structure
 
+## Project Structure
+
+```text
 src/main/
 ├── java/com/mayfield/Mayfield/
 │   ├── config/
@@ -120,24 +123,25 @@ src/main/
 │
 └── resources/
     ├── templates/
-    │   ├── index.html                  # Home page
-    │   ├── catalog.html                # Product listing
-    │   ├── mayfield.html               # Custom login/signup
-    │   ├── dashboard/                  # Admin panel
+    │   ├── index.html                # Home page
+    │   ├── catalog.html              # Product listing
+    │   ├── mayfield.html             # Custom login/signup
+    │   ├── dashboard/
     │   │   ├── index.html
     │   │   ├── charts.html
     │   │   ├── tables.html
     │   │   └── 401.html, 404.html, 500.html
-    │   └── fragments/                  # Reusable components
+    │   └── fragments/
     │
     └── static/
-        ├── css_assets/               # Main site styles
-        ├── javascript_assets/        # Main site scripts
-        ├── _images/                  # Product images
-        └── dashboard/                # Admin assets
+        ├── css_assets/
+        ├── javascript_assets/
+        ├── _images/
+        └── dashboard/
             ├── css/
             ├── js/
             └── assets/
+```
 
 ## Credits
 - **Framework:** Spring Boot
